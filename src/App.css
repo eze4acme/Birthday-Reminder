@@ -1,0 +1,9 @@
+body{
+    margin: 0;
+    background: linear-gradient(to left, purple, pink);
+}
+.section{
+    max-width: 620px;
+    margin: 0 auto;
+    background-color: blue;
+}

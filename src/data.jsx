@@ -1,12 +1,8 @@
 const peopleData = [
-  {
-    image: "./assets/images/hip1.jpg",
-    name: "Bertie Yates",
-    age: 29,
-  },
-  { image: "./assets/images/hi2.jpg", name: "Hester Hogan", age: 32 },
-  { image: "./assets/images/hip3.jpg", name: "Larry Little", age: 36 },
-  { image: "./assets/images/logo.jpg", name: "Sean Walsh", age: 34 },
-  { image: "./assets/images/user1.jpg", name: "Lola Gardner", age: 29 },
+  { id: 1, image: "./src/assets/images/hip1.jpg", name: "Bertie Yates", age: 29 },
+  { id: 2, image: "./src/assets/images/hip2.jpg", name: "Hester Hogan", age: 32 },
+  { id: 3, image: "./src/assets/images/hip3.jpg", name: "Larry Little", age: 36 },
+  { id: 4, image: "./src/assets/images/logo.jpg", name: "Sean Walsh", age: 34 },
+  { id: 5, image: "./src/assets/images/user1.jpg", name: "Lola Gardner", age: 29 },
 ];
 export default peopleData;
