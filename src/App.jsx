@@ -1,28 +1,37 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import peopleData from "./data";
 
+
 function App() {
-//  <img src="./src/assets/images/hip1.jpg" alt="" srcset="" width={500} height={500}/>
+const [data, setData] = useState(peopleData);
+function handleClick() {
+  setData([])
+}
   return (
     <section className="section">
-      <h1>5 Birthdays Today</h1>
-      <BirthdayList />
-      <button type="text">Clear All</button>
+      <h1 id="title">{data.length} Birthdays Today</h1>
+      <BirthdayList data ={data} setData={setData}/>
+      <button type="text" className="btn"onClick={handleClick}>Clear All</button>
     </section>
   );
 }
 
 
 
- function BirthdayList() {
-  const [data, setData] = useState(peopleData);
+ function BirthdayList(props) {
+  const {data, setData} = props
+  function handleSpan(id) {
+    let newBirthPerson = data.filter((person) =>{
+      return person.id !== id
+    })
+    setData(newBirthPerson)
+  }
   return (
     <article>
-      
-      {peopleData.map((people) => {
+      {data.map((people) => {
         // console.log(people);
-        return <Birthday key={people.id} {...people} />;
+        return <Birthday key={people.id} {...people} handleSpan={handleSpan}/>;
       })}
     </article>
   );
@@ -30,16 +39,18 @@ function App() {
 
 
 function Birthday(props) {
-  const {image, id, name, age} = props
+  const {image, id, name, age, handleSpan} = props
   return (
     <div className="protion">
-      <img src={image} alt="" width={300} height={300}/>
+      <img src={image} alt="" width={75} height={75} />
       <div className="text-section">
-        <h1>{name}</h1>
+        <h1>
+          {name}<span onClick={() =>handleSpan(id)}>X</span>
+        </h1>
         <p>{age}years</p>
       </div>
     </div>
-  )
+  );
 }
 
 

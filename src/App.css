@@ -1,9 +1,86 @@
 body{
+    /* overflow: hidden; */
     margin: 0;
     background: linear-gradient(to left, purple, pink);
+    box-sizing: border-box;
 }
 .section{
+    box-sizing: border-box;
     max-width: 620px;
-    margin: 0 auto;
-    background-color: blue;
+    height: 94vh;
+    margin: 12px auto;
+    background: linear-gradient(to right, purple, pink);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50% 50% 50% 0;
+    position: relative;
+    filter: drop-shadow(15px 15px 3px purple);
+}
+.section h1{
+    margin-bottom: 0;
+    letter-spacing: 1.2px;
+    text-shadow: 0 0 0.3px black;
+    color: rgb(223, 220, 220);
+}
+.protion{
+    background-color: purple;
+    max-width: 200px;
+    border-radius: 20% 0 20% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+    gap: 5px;
+    position: relative;
+    /* padding:-px 0; */
+}
+.protion img{
+     border-radius: 50%;
+     object-fit: cover;
+}
+.btn{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: orangered;
+    outline: none;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px 5px 5px 0;
+    font-weight: bold;
+     text-shadow: 0 0 0.3px black;
+     transition: all 0.5s ease-in-out;
+     cursor: pointer;
+}
+.text-section{
+    color: orangered;
+    font-weight: bold;
+     text-shadow: 0 0 15px orangered;
+}
+.text-section h1{
+     text-shadow: 0 0 15px orangered;
+     /* max-width: 50%; */
+     margin-left: 10px;
+     /* background-color: blue; */
+     line-height: 15px;
+     display: inline-block;
+     /* position: relative; */
+}
+#title{
+    color: black;
+    text-shadow: 0 0 40px orangered;
+}
+.btn:hover{
+    background-color: purple;
+}
+span{
+    color:black;
+    position: absolute;
+    top: 0;
+    right:0;
+    font-size: 12px;
+    cursor: pointer;
 }
