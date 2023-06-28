@@ -30,7 +30,6 @@ function handleClick() {
   return (
     <article>
       {data.map((people) => {
-        // console.log(people);
         return <Birthday key={people.id} {...people} handleSpan={handleSpan}/>;
       })}
     </article>

@@ -1,7 +1,7 @@
 body{
     /* overflow: hidden; */
     margin: 0;
-    background: linear-gradient(to left, purple, pink);
+    background: linear-gradient(to left, purple, purple);
     box-sizing: border-box;
 }
 .section{
@@ -77,10 +77,16 @@ body{
     background-color: purple;
 }
 span{
-    color:black;
+    color:white;
     position: absolute;
     top: 0;
     right:0;
-    font-size: 12px;
+    font-size: 8px;
     cursor: pointer;
+    background-color: red;
+    border-radius: 50%;
+    padding: 2px 2px;
+    text-align: center;
+    font-weight: bold;
+
 }
